@@ -22,10 +22,12 @@
 				    title: 'My City'
 				  });
 				marker.setMap(map);
-				checkScreenSize();
-				
+				$( document ).ready(function() {
+					checkScreenSize();
+				});
 				// Create the DIV to hold the control and call the CenterControl() constructor
 				// passing in this DIV.
+				
 				var centerControlDiv = document.createElement('div');
 				var centerControl = new CenterControl(centerControlDiv, map);
 				
@@ -37,10 +39,9 @@
 				function checkScreenSize(){
 					if ($(window).width() < 768) {
 						map.controls[google.maps.ControlPosition.TOP_RIGHT].clear();
-					   	map.controls[google.maps.ControlPosition.TOP_RIGHT].push(centerControlDiv);
-					}
-					else {
-					   map.controls[google.maps.ControlPosition.TOP_RIGHT].clear();
+						map.controls[google.maps.ControlPosition.TOP_RIGHT].push(centerControlDiv);
+					}else{
+					  	map.controls[google.maps.ControlPosition.TOP_RIGHT].clear();
 					}
 				};
 				
@@ -49,8 +50,7 @@
 					
 				// Set CSS for the control border.
 				  var controlUI = document.createElement('div');
-				  controlUI.style.backgroundColor = '#fff';
-				  controlUI.style.border = '2px solid #fff';
+				  controlUI.style.backgroundColor = '#FFF';
 				  controlUI.style.borderRadius = '3px';
 				  controlUI.style.boxShadow = '0 2px 6px rgba(0,0,0,.3)';
 				  controlUI.style.cursor = 'pointer';
@@ -70,7 +70,7 @@
 				  controlText.style.lineHeight = '19px';
 				  controlText.style.paddingLeft = '5px';
 				  controlText.style.paddingRight = '5px';
-				  controlText.innerHTML = 'Center Map';
+				  controlText.innerHTML = '<i class="fa fa-bars fa-3x"></i>';
 				  controlUI.appendChild(controlText);
 				  
 				   
@@ -78,6 +78,7 @@
 				  controlUI.addEventListener('click', function(e) {
 				  	e.preventDefault();
         			$("#wrapper").toggleClass("toggled");
+        			checkScreenSize();
 				  });
 				
 				}

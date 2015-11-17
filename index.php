@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Map</title>
+    <!-- Font Awesome -->
+    <link href="components/fontAwesome.4.4/css/font-awesome.min.css" rel="stylesheet">
     
 	<!-- Google Fonts -->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcVieGnFnEqNe_YE8HSQeFn9cEMWBVif4" type="text/javascript"></script>
