@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="store" lang="en">
+<html ng-app="map" lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,7 @@
     <title>Map</title>
     
 	<!-- Google Fonts -->
-
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAcVieGnFnEqNe_YE8HSQeFn9cEMWBVif4" type="text/javascript"></script>
     <!-- Bootstrap -->
     <link href="components/bootstrap/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
@@ -21,9 +21,45 @@
     <![endif]-->
   </head>
 	  <body>
-	  	<div class="container">
-			Hello World
-  		</div>
+	  	<div id="wrapper">
+		  	<!-- Sidebar -->
+	        <div id="sidebar-wrapper">
+	            <ul class="sidebar-nav">
+	                <li class="sidebar-brand">
+	                    <a href="#">
+	                        Start Bootstrap
+	                    </a>
+	                </li>
+	                <li>
+	                    <a href="#">Dashboard</a>
+	                </li>
+	                <li>
+	                    <a href="#">Shortcuts</a>
+	                </li>
+	                <li>
+	                    <a href="#">Overview</a>
+	                </li>
+	                <li>
+	                    <a href="#">Events</a>
+	                </li>
+	                <li>
+	                    <a href="#">About</a>
+	                </li>
+	                <li>
+	                    <a href="#">Services</a>
+	                </li>
+	                <li>
+	                    <a href="#">Contact</a>
+	                </li>
+	            </ul>
+	        </div>
+	        <!-- Page Content -->
+	        <div id="page-content-wrapper">
+	            <div class="container-fluid">
+				  	<my-map id="map-canvas"></my-map>
+	            </div>
+	        </div>
+ 		</div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="components/jquery/jquery-2.1.4.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
