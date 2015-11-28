@@ -70,6 +70,7 @@
     <script src="components/angular/angular.min.js"></script>
     <!-- Include Angular.js -->
     <script src="js/app.js"></script>
+    <script src="js/directives/map.js"></script>
     <!-- Include custom jquery -->
     <script src="js/main.js"></script>
 
